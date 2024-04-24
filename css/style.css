@@ -61,3 +61,7 @@ textarea {
 .btn-reverse {
     background-color: darkblue;
 }
+
+#f-to-c{
+    display: none;
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Temperature Converter</title>
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -21,14 +22,49 @@
                 <h3>Celcius (&deg;C)</h3>
             </head>
             <article>
-                <textarea name="" id="" cols="30" rows="1" type="number"></textarea>
+                <textarea name="angkaCel" id="angkaCel" cols="30" rows="1" type="number"
+                    placeholder="0&deg;"></textarea>
             </article>
             <div>
-                <button class="btn-convert">Convert</button>
-                <button class="btn-reset">Reset</button>
-                <button class="btn-reverse">Reverse</button>
+                <button class="btn-convert" onclick="convertC()">Convert</button>
+                <button class="btn-reset" onclick="resetC()">Reset</button>
+                <button class="btn-reverse" onclick="reverse()">Reverse</button>
             </div>
         </section>
+        <script>
+            function convertC() {
+                var Celcius = document.getElementById("angkaCel").value;
+                console.log("( ", Celcius, " * 9/5 ) +32");
+                var CtoF = ((Celcius) * 9 / 5) + 32;
+                console.log(CtoF);
+                document.getElementById("angkaFah").value = CtoF;
+            }
+            function resetC() {
+                var angkaCel = document.getElementById("angkaCel").value = "0";
+                console.log(angkaCel);
+            }
+            function reverse() {
+
+            }
+            function convertF() {
+                var Fahrenhait = document.getElementById("angkaFah").value;
+                console.log("( ", Fahrenhait, " - 32 ) * 5/9 ");
+                var FtoC = ((Fahrenhait) - 32) * 5 / 9;
+                console.log(FtoC);
+                document.getElementById("angkaCel").value = FtoC;
+            }
+            function resetF() {
+                var angkaFah = document.getElementById("angkaFah").value = "0";
+                console.log(angkaFah);
+            }
+            function explanation() {
+                if (onclick = convertC) {
+
+                    document.getElementById("kalkulasi").value = CtoF;
+
+                }
+            }
+        </script>
         <!-- Section Fahrenheit -->
         <section class="section-fahrenheit">
             <p>Masukan Suhu Derajat Fahrenheit(&deg;F) . . .</p>
@@ -37,11 +73,11 @@
                 <h3>Fahrenheit (&deg;F)</h3>
             </head>
             <article>
-                <textarea name="" id="" cols="30" rows="1"></textarea>
+                <textarea name="angkaFah" id="angkaFah" cols="30" rows="1" placeholder="0&deg;"></textarea>
             </article>
             <div>
-                <button class="btn-convert">Convert</button>
-                <button class="btn-reset">Reset</button>
+                <button class="btn-convert" onclick="convertF()">Convert</button>
+                <button class="btn-reset" onclick="resetF()">Reset</button>
                 <button class="btn-reverse">Reverse</button>
             </div>
         </section>
@@ -52,17 +88,18 @@
                 <h3>Cara Kalkulasi</h3>
             </head>
             <article>
-                <textarea name="" id="" cols="30" rows="1"></textarea>
+                <textarea name="kalkulasi" id="kalkulasi" cols="30" rows="1" onclick="explanation()"></textarea>
             </article>
         </section>
         <!-- Section Penjelasan/Explanation -->
-        <section class="explanation">
+        <section class=" explanation">
             <header>
                 <h3>Cara Konversi dari (&deg;C) ke (&deg;F)</h3>
             </header>
             <hr>
             <article>
-                (Suhu <i>S</i> dalam derajat Fahrenheit (&deg;F) sama dengan suhu S dalam derajat Celcius (&deg;C) kali
+                (Suhu <i>S</i> dalam derajat Fahrenheit (&deg;F) sama dengan suhu S dalam derajat Celcius (&deg;C)
+                kali
                 9 dibagi 5) ditambah 32 <br>
                 <i>S</i><sub>(&deg;F)</sub> = (<i>S</i><sub>(&deg;C)</sub> x 9/5) + 32 =<br>
                 atau <br>
