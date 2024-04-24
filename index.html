@@ -15,72 +15,61 @@
     </header>
     <main class="main-section-introduction">
         <!-- Section Celcius -->
-        <section class="section-celcius">
-            <p>Masukan Suhu Derajat Celcius(&deg;C) . . .</p>
+        <form id="CtoF">
+            <section class="section-celcius">
+                <p>Masukan Suhu Derajat Celcius(&deg;C) . . .</p>
 
-            <head>
-                <h3>Celcius (&deg;C)</h3>
-            </head>
-            <article>
-                <textarea name="angkaCel" id="angkaCel" cols="30" rows="1" type="number"
-                    placeholder="0&deg;"></textarea>
-            </article>
-            <div>
-                <button class="btn-convert" onclick="convertC()">Convert</button>
-                <button class="btn-reset" onclick="resetC()">Reset</button>
-                <button class="btn-reverse" onclick="reverse()">Reverse</button>
-            </div>
-        </section>
-        <script>
-            function convertC() {
-                var Celcius = document.getElementById("angkaCel").value;
-                console.log("( ", Celcius, " * 9/5 ) +32");
-                var CtoF = ((Celcius) * 9 / 5) + 32;
-                console.log(CtoF);
-                document.getElementById("angkaFah").value = CtoF;
-            }
-            function resetC() {
-                var angkaCel = document.getElementById("angkaCel").value = "0";
-                console.log(angkaCel);
-            }
-            function reverse() {
+                <head>
+                    <h3>Celcius (&deg;C)</h3>
+                </head>
+                <article>
+                    <textarea name="angkaCel" id="angkaCel" cols="30" rows="1" type="number" placeholder="0&deg;"></textarea>
+                </article>
+                <div>
+                    <button id="button-convert" class="button-convert" onclick="convert()" type="button">Convert</button>
+                    <button class="btn-reset" onclick="reset()" type="button">Reset</button>
+                    <button class="btn-reverse" onclick="reverse()" type="button">Reverse</button>
+                </div>
+            </section>
 
-            }
-            function convertF() {
-                var Fahrenhait = document.getElementById("angkaFah").value;
-                console.log("( ", Fahrenhait, " - 32 ) * 5/9 ");
-                var FtoC = ((Fahrenhait) - 32) * 5 / 9;
-                console.log(FtoC);
-                document.getElementById("angkaCel").value = FtoC;
-            }
-            function resetF() {
-                var angkaFah = document.getElementById("angkaFah").value = "0";
-                console.log(angkaFah);
-            }
-            function explanation() {
-                if (onclick = convertC) {
-
-                    document.getElementById("kalkulasi").value = CtoF;
-
-                }
-            }
-        </script>
+            <section class="section-fahrenheit">
+                
+                <head>
+                    <h3>Fahrenheit (&deg;F)</h3>
+                </head>
+                <article>
+                    <textarea name="angkaFah" id="hasilFah" cols="30" rows="1" placeholder="0&deg;"></textarea>
+                </article>
+            </section>
+        </form>
         <!-- Section Fahrenheit -->
-        <section class="section-fahrenheit">
-            <p>Masukan Suhu Derajat Fahrenheit(&deg;F) . . .</p>
+        <form id="FtoC">
+            <section class="section-celcius">
+                <p>Masukan Suhu Derajat Fahrenheit(&deg;F) . . .</p>
 
-            <head>
-                <h3>Fahrenheit (&deg;F)</h3>
-            </head>
-            <article>
-                <textarea name="angkaFah" id="angkaFah" cols="30" rows="1" placeholder="0&deg;"></textarea>
-            </article>
-            <div>
-                <button class="btn-convert" onclick="convertF()">Convert</button>
-                <button class="btn-reset" onclick="resetF()">Reset</button>
-                <button class="btn-reverse">Reverse</button>
-            </div>
-        </section>
+                <head>
+                    <h3>Fahrenheit (&deg;F)</h3>
+                </head>
+                <article>
+                    <textarea name="angkaFah" id="angkaFah" cols="30" rows="1" type="number" placeholder="0&deg;"></textarea>
+                </article>
+                <div>
+                    <button id="button-convert" class="button-convert" onclick="convert()" type="button">Convert</button>
+                    <button class="btn-reset" onclick="reset()" type="button">Reset</button>
+                    <button class="btn-reverse" onclick="reverse()" type="button">Reverse</button>
+                </div>
+            </section>
+
+            <section class="section-celcius">
+
+                <head>
+                    <h3>Celcius (&deg;C)</h3>
+                </head>
+                <article>
+                    <textarea name="angkaCel" id="hasilCel" cols="30" rows="1" placeholder="0&deg;"></textarea>
+                </article>
+            </section>
+        </form>
         <!-- Section Kalkulasi -->
         <section class="section-Kalkulasi">
 

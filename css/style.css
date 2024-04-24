@@ -27,7 +27,7 @@ textarea {
     resize: none;
 }
 
-.btn-convert,
+.button-convert,
 .btn-reset,
 .btn-reverse {
     padding: 10px;
@@ -37,7 +37,7 @@ textarea {
     border-radius: 5px;
 }
 
-.btn-convert:hover,
+.button-convert:hover,
 .btn-reset:hover,
 .btn-reverse:hover {
     opacity: 0.8;
@@ -50,7 +50,7 @@ textarea {
     padding-top: 5px;
 }
 
-.btn-convert {
+.button-convert {
     background-color: green;
 }
 
@@ -62,6 +62,12 @@ textarea {
     background-color: darkblue;
 }
 
-#f-to-c{
+#FtoC{
     display: none;
+}
+
+@media only screen and (max-width:320px){
+    .main-section-introduction {
+        background-color: cadetblue;
+    }
 }
