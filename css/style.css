@@ -44,7 +44,7 @@ textarea {
     transition-delay: 100ms;
 }
 
-.btn-convert:active,
+.button-convert:active,
 .btn-reset:active,
 .btn-reverse:active {
     padding-top: 5px;
@@ -62,12 +62,41 @@ textarea {
     background-color: darkblue;
 }
 
-#FtoC{
+#FtoC {
     display: none;
 }
 
-@media only screen and (max-width:320px){
+#CtoF {
+    display: block;
+}
+
+#FkeC {
+    display: none;
+}
+
+#CkeF {
+    display: block;
+}
+#kalkulasi {
+    resize:none;
+}
+
+@media only screen and (max-width:320px) {
     .main-section-introduction {
-        background-color: cadetblue;
+        background-color: green;
+    }
+
+    #kalkulasi {
+        resize: vertical;
+    }
+}
+
+@media only screen and (max-width:720px) {
+    .main-section-introduction {
+        background-color: papayawhip;
+    }
+
+    #kalkulasi {
+        resize: vertical;
     }
 }

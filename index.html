@@ -23,17 +23,19 @@
                     <h3>Celcius (&deg;C)</h3>
                 </head>
                 <article>
-                    <textarea name="angkaCel" id="angkaCel" cols="30" rows="1" type="number" placeholder="0&deg;"></textarea>
+                    <textarea name="angkaCel" id="angkaCel" cols="30" rows="1" type="number" placeholder="0&deg;"
+                        oninput="Calc()" autofocus></textarea>
                 </article>
                 <div>
-                    <button id="button-convert" class="button-convert" onclick="convertC()" type="button">Convert</button>
+                    <button id="button-convert" class="button-convert" onclick="convertC()"
+                        type="button">Convert</button>
                     <button class="btn-reset" onclick="reset()" type="button">Reset</button>
                     <button class="btn-reverse" onclick="reverse()" type="button">Reverse</button>
                 </div>
             </section>
 
             <section class="section-fahrenheit">
-                
+
                 <head>
                     <h3>Fahrenheit (&deg;F)</h3>
                 </head>
@@ -51,10 +53,12 @@
                     <h3>Fahrenheit (&deg;F)</h3>
                 </head>
                 <article>
-                    <textarea name="angkaFah" id="angkaFah" cols="30" rows="1" type="number" placeholder="0&deg;"></textarea>
+                    <textarea name="angkaFah" id="angkaFah" cols="30" rows="1" type="number" placeholder="0&deg;"
+                        oninput="Calc()"></textarea>
                 </article>
                 <div>
-                    <button id="button-convert" class="button-convert" onclick="convertF()" type="button">Convert</button>
+                    <button id="button-convert" class="button-convert" onclick="convertF()"
+                        type="button">Convert</button>
                     <button class="btn-reset" onclick="reset()" type="button">Reset</button>
                     <button class="btn-reverse" onclick="reverse()" type="button">Reverse</button>
                 </div>
@@ -77,36 +81,39 @@
                 <h3>Cara Kalkulasi</h3>
             </head>
             <article>
-                <textarea name="kalkulasi" id="kalkulasi" cols="30" rows="1" onclick="explanation()"></textarea>
+                <textarea name="kalkulasi" id="kalkulasi" cols="30" rows="1" oninput="Calc()" value=""></textarea>
             </article>
         </section>
         <!-- Section Penjelasan/Explanation -->
-        <section class=" explanation">
-            <header>
-                <h3>Cara Konversi dari (&deg;C) ke (&deg;F)</h3>
-            </header>
-            <hr>
-            <article>
-                (Suhu <i>S</i> dalam derajat Fahrenheit (&deg;F) sama dengan suhu S dalam derajat Celcius (&deg;C)
-                kali
-                9 dibagi 5) ditambah 32 <br>
-                <i>S</i><sub>(&deg;F)</sub> = (<i>S</i><sub>(&deg;C)</sub> x 9/5) + 32 =<br>
-                atau <br>
-                <i>S</i><sub>(&deg;F)</sub> = (<i>S</i><sub>(&deg;C)</sub> x 1.8) + 32 =<br>
-            </article>
-            <br>
-            <header>
-                <h3>Cara Konversi dari (&deg;F) ke (&deg;C)</h3>
-            </header>
-            <hr>
-            <article>
-                (Suhu <i>S</i> dalam derajat Celcius (&deg;C) sama dengan suhu S dalam derajat Fahrenheit (&deg;F)
-                dikurang 32 )  kali
-                5 dibagi 9<br>
-                <i>S</i><sub>(&deg;C)</sub> = (<i>S</i><sub>(&deg;F)</sub> - 32 ) x 5/9=<br>
-                atau <br>
-                <i>S</i><sub>(&deg;C)</sub> = (<i>S</i><sub>(&deg;F)</sub> - 32 ) x 0.55555555=<br>
-            </article>
+        <section class="explanation">
+            <div id="CkeF">
+                <header>
+                    <h3>Cara Konversi dari (&deg;C) ke (&deg;F)</h3>
+                </header>
+                <hr>
+                <article>
+                    (Suhu <i>S</i> dalam derajat Fahrenheit (&deg;F) sama dengan suhu S dalam derajat Celcius (&deg;C)
+                    kali
+                    9 dibagi 5) ditambah 32 <br>
+                    <i>S</i><sub>(&deg;C)</sub> = (<i>S</i><sub>(&deg;F)</sub> x 9/5) + 32 = X<br>
+                    atau <br>
+                    <i>S</i><sub>(&deg;C)</sub> = (<i>S</i><sub>(&deg;F)</sub> x 1.8) + 32 = X<br>
+                </article>
+            </div>
+            <div id="FkeC">
+                <header>
+                    <h3>Cara Konversi dari (&deg;F) ke (&deg;C)</h3>
+                </header>
+                <hr>
+                <article>
+                    (Suhu <i>S</i> dalam derajat Celcius (&deg;C) sama dengan suhu S dalam derajat Fahrenheit (&deg;F)
+                    dikurang 32 ) kali
+                    5 dibagi 9<br>
+                    <i>S</i><sub>(&deg;F)</sub> = (<i>S</i><sub>(&deg;C)</sub> - 32 ) x 5/9 = X<br>
+                    atau <br>
+                    <i>S</i><sub>(&deg;F)</sub> = (<i>S</i><sub>(&deg;C)</sub> - 32 ) x 0.55555555 = X<br>
+                </article>
+            </div>
         </section>
     </main>
 </body>
