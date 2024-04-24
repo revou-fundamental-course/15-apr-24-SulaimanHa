@@ -26,7 +26,7 @@
                     <textarea name="angkaCel" id="angkaCel" cols="30" rows="1" type="number" placeholder="0&deg;"></textarea>
                 </article>
                 <div>
-                    <button id="button-convert" class="button-convert" onclick="convert()" type="button">Convert</button>
+                    <button id="button-convert" class="button-convert" onclick="convertC()" type="button">Convert</button>
                     <button class="btn-reset" onclick="reset()" type="button">Reset</button>
                     <button class="btn-reverse" onclick="reverse()" type="button">Reverse</button>
                 </div>
@@ -44,7 +44,7 @@
         </form>
         <!-- Section Fahrenheit -->
         <form id="FtoC">
-            <section class="section-celcius">
+            <section class="section-fahrenheit">
                 <p>Masukan Suhu Derajat Fahrenheit(&deg;F) . . .</p>
 
                 <head>
@@ -54,7 +54,7 @@
                     <textarea name="angkaFah" id="angkaFah" cols="30" rows="1" type="number" placeholder="0&deg;"></textarea>
                 </article>
                 <div>
-                    <button id="button-convert" class="button-convert" onclick="convert()" type="button">Convert</button>
+                    <button id="button-convert" class="button-convert" onclick="convertF()" type="button">Convert</button>
                     <button class="btn-reset" onclick="reset()" type="button">Reset</button>
                     <button class="btn-reverse" onclick="reverse()" type="button">Reverse</button>
                 </div>
@@ -93,6 +93,19 @@
                 <i>S</i><sub>(&deg;F)</sub> = (<i>S</i><sub>(&deg;C)</sub> x 9/5) + 32 =<br>
                 atau <br>
                 <i>S</i><sub>(&deg;F)</sub> = (<i>S</i><sub>(&deg;C)</sub> x 1.8) + 32 =<br>
+            </article>
+            <br>
+            <header>
+                <h3>Cara Konversi dari (&deg;F) ke (&deg;C)</h3>
+            </header>
+            <hr>
+            <article>
+                (Suhu <i>S</i> dalam derajat Celcius (&deg;C) sama dengan suhu S dalam derajat Fahrenheit (&deg;F)
+                dikurang 32 )  kali
+                5 dibagi 9<br>
+                <i>S</i><sub>(&deg;C)</sub> = (<i>S</i><sub>(&deg;F)</sub> - 32 ) x 5/9=<br>
+                atau <br>
+                <i>S</i><sub>(&deg;C)</sub> = (<i>S</i><sub>(&deg;F)</sub> - 32 ) x 0.55555555=<br>
             </article>
         </section>
     </main>
